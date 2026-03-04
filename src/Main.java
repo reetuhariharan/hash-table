@@ -1,12 +1,15 @@
 public class Main {
+
     public static void main(String[] args) {
 
-        UsernameChecker checker = new UsernameChecker();
+        FlashSaleInventory sale = new FlashSaleInventory();
 
-        checker.registerUser("john_doe", 1);
+        sale.addProduct("IPHONE15", 5);
 
-        System.out.println(checker.checkAvailability("john_doe"));
-        System.out.println(checker.checkAvailability("jane_smith"));
+        sale.purchaseItem("IPHONE15");
+        sale.purchaseItem("IPHONE15");
+
+        System.out.println("Stock left: " + sale.checkStock("IPHONE15"));
 
     }
 }
