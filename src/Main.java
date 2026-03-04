@@ -2,13 +2,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        AutocompleteSystem auto = new AutocompleteSystem();
+        ParkingLotHashing parking = new ParkingLotHashing();
 
-        auto.addQuery("java tutorial");
-        auto.addQuery("java interview");
-        auto.addQuery("javascript course");
+        parking.parkVehicle("ABC123");
+        parking.parkVehicle("XYZ789");
 
-        System.out.println("Suggestions for 'jav':");
-        auto.suggest("jav");
+        parking.exitVehicle("ABC123");
     }
 }
