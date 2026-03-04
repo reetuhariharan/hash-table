@@ -1,12 +1,10 @@
 public class Main {
 
     public static void main(String[] args) {
+        TwoSumTransactions fraud = new TwoSumTransactions();
 
-        ParkingLotHashing parking = new ParkingLotHashing();
+        int[] transactions = {500, 300, 200, 700};
 
-        parking.parkVehicle("ABC123");
-        parking.parkVehicle("XYZ789");
-
-        parking.exitVehicle("ABC123");
+        fraud.findTwoSum(transactions, 500);
     }
 }
