@@ -2,12 +2,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        DNSCache dns = new DNSCache();
+        PlagiarismDetector detector = new PlagiarismDetector();
 
-        dns.addEntry("google.com", "172.217.14.206");
+        detector.addDocument("java is easy to learn");
 
-        System.out.println(dns.resolve("google.com"));
-        System.out.println(dns.resolve("facebook.com"));
+        int result = detector.checkSimilarity("java is powerful");
+
+        System.out.println("Matching words: " + result);
 
     }
 }
