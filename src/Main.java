@@ -1,10 +1,11 @@
 public class Main {
 
     public static void main(String[] args) {
-        TwoSumTransactions fraud = new TwoSumTransactions();
+        MultiLevelCache cache = new MultiLevelCache();
 
-        int[] transactions = {500, 300, 200, 700};
+        cache.addVideo("video1", "Movie Data");
 
-        fraud.findTwoSum(transactions, 500);
+        System.out.println(cache.getVideo("video1"));
+        System.out.println(cache.getVideo("video1"));
     }
-}
+    }
