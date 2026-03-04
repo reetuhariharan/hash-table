@@ -2,13 +2,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        PlagiarismDetector detector = new PlagiarismDetector();
+        WebsiteAnalytics analytics = new WebsiteAnalytics();
 
-        detector.addDocument("java is easy to learn");
+        analytics.visitPage("/home");
+        analytics.visitPage("/home");
+        analytics.visitPage("/about");
 
-        int result = detector.checkSimilarity("java is powerful");
-
-        System.out.println("Matching words: " + result);
+        analytics.showStats();
 
     }
 }
