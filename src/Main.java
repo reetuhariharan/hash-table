@@ -2,13 +2,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        WebsiteAnalytics analytics = new WebsiteAnalytics();
+        RateLimiter limiter = new RateLimiter();
 
-        analytics.visitPage("/home");
-        analytics.visitPage("/home");
-        analytics.visitPage("/about");
-
-        analytics.showStats();
+        limiter.request("user1");
+        limiter.request("user1");
+        limiter.request("user1");
+        limiter.request("user1");
+        limiter.request("user1");
+        limiter.request("user1");
 
     }
 }
